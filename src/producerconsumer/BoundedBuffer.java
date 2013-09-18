@@ -29,6 +29,7 @@ public class BoundedBuffer extends AbstractBuffer {
     }
 
     /**
+     * 
      * @return The item that was removed
      */
     public synchronized int take() {
@@ -43,6 +44,7 @@ public class BoundedBuffer extends AbstractBuffer {
     }
 
     /**
+     * 
      * @param element item to be inserted
      */
     public synchronized void put(int element) {
