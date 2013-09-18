@@ -18,7 +18,7 @@ public class BoundedBuffer extends AbstractBuffer {
 
     /**
      * 
-     * @return Capacity of buffer 
+     * @return Capacity of this buffer
      */
     public int getCapacity() {
         return capacity;
@@ -29,7 +29,7 @@ public class BoundedBuffer extends AbstractBuffer {
     }
 
     /**
-     * @return item removed
+     * @return The item that was removed
      */
     public synchronized int take() {
         while (qq.isEmpty()) {
