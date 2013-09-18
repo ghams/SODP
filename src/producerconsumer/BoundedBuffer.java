@@ -20,6 +20,10 @@ public class BoundedBuffer extends AbstractBuffer {
         this.capacity = capacity;
     }
 
+    /**
+     * 
+     * @return Capacity of buffer 
+     */
     public int getCapacity() {
         return capacity;
     }
@@ -28,6 +32,9 @@ public class BoundedBuffer extends AbstractBuffer {
         return false;
     }
 
+    /**
+     * @return item removed
+     */
     public synchronized int take() {
         while (qq.isEmpty()) {
             try {
@@ -39,6 +46,9 @@ public class BoundedBuffer extends AbstractBuffer {
         return item;
     }
 
+    /**
+     * @param element item to be inserted
+     */
     public synchronized void put(int element) {
         while (qq.size() == getCapacity()) {
             try {
