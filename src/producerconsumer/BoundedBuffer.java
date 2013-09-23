@@ -42,7 +42,7 @@ public class BoundedBuffer extends AbstractBuffer {
         notifyAll();
         return item;
     }
-
+    
     /**
      * 
      * @param element item to be inserted
@@ -53,8 +53,7 @@ public class BoundedBuffer extends AbstractBuffer {
                 wait();
             } catch (InterruptedException e) { /* ignore */ }
         }
-        int item = 0;
-        qq.add(item);
+        qq.add(element);
         notifyAll();
     }
 }
