@@ -17,7 +17,7 @@ public class BoundedBuffer extends AbstractBuffer {
     }
 
     /**
-     * 
+     *
      * @return Capacity of this buffer
      */
     public int getCapacity() {
@@ -29,7 +29,7 @@ public class BoundedBuffer extends AbstractBuffer {
     }
 
     /**
-     * 
+     *
      * @return The item that was removed
      */
     public synchronized int take() {
@@ -42,9 +42,9 @@ public class BoundedBuffer extends AbstractBuffer {
         notifyAll();
         return item;
     }
-    
+
     /**
-     * 
+     *
      * @param element item to be inserted
      */
     public synchronized void put(int element) {
